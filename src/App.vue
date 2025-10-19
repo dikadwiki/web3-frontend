@@ -60,7 +60,7 @@ const handleTransfer = async () => {
     success.value = '';
     
     await transfer(recipientAddress.value, transferAmount.value);
-    success.value = `Successfully transferred ${transferAmount.value} ${tokenInfo.value?.symbol || 'MTK'}!`;
+    success.value = `Successfully transferred ${transferAmount.value} ${tokenInfo.value?.symbol || 'DN'}!`;
     
     await loadBalance();
     recipientAddress.value = '';
@@ -150,7 +150,7 @@ onMounted(async () => {
         <div class="text-center">
           <p class="text-gray-300 mb-2 text-sm uppercase tracking-wider">Your Balance</p>
           <h3 class="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-2">
-            {{ balance }} {{ tokenInfo?.symbol || 'MTK' }}
+            {{ balance }} {{ tokenInfo?.symbol || 'DN' }}
           </h3>
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg mt-4">
             <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -186,7 +186,7 @@ onMounted(async () => {
           
           <div>
             <label class="block text-sm font-medium mb-2 text-gray-300">
-              Amount ({{ tokenInfo?.symbol || 'MTK' }})
+              Amount ({{ tokenInfo?.symbol || 'DN' }})
             </label>
             <div class="relative">
               <input
@@ -205,7 +205,7 @@ onMounted(async () => {
                 MAX
               </button>
             </div>
-            <p class="text-xs text-gray-400 mt-2">Available: {{ balance }} {{ tokenInfo?.symbol || 'MTK' }}</p>
+            <p class="text-xs text-gray-400 mt-2">Available: {{ balance }} {{ tokenInfo?.symbol || 'DN' }}</p>
           </div>
 
           <button
